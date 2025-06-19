@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miroxen - Portfolio</title>
+    <link rel="stylesheet" href="msv.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="#home">Home</a></li>
+            <li class="link"><a href="#projects">Projects</a></li>
+            <li class="link"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-section">
+        <h1 class="intro-title">I'm Miroxen <span></span> Developer</h1>
+        <p class="intro-text">If you're reading this, that means either I wanna show you my work or you wanna work with me. Anyway, I'm working on an indie game with pixel art style and this is my progress.</p>
+    </section>
+
+    <div class="container">
+        <div class="cards">
+            <!-- Your existing cards will go here -->
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.link');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html> 

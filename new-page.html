@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="icon" type="image/x-icon" href="miroxen icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>New Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href=""><img src="miroxen icon.png" alt="miroxen icon"></a>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="nav-links">
+            <il class="link"><a href="msv.html">home</a></il>
+            <il class="link"><a href="">social media</a></il>
+    
+        </ul>
+
+        <button class="btn">Get Started</button>
+    </nav>
+
+    <section class="intro-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="intro-title">im miroxen <span class="gradient-text">developer</span></h1>
+                
+            </div>
+            <div class="hero-image">
+                <img src="assets/머슴방___msb_888__on_X-removebg-preview.png" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="chart-container">
+            <canvas id="skillsChart"></canvas>
+            <div class="skill-values">
+                <div class="skill-value">Code: 92</div>
+                <div class="skill-value">Mentality: 97</div>
+                <div class="skill-value">Stamina: 98</div>
+                <div class="skill-value">Gaming: 99</div>
+                <div class="skill-value">Think: 95</div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="languagesChart"></canvas>
+            <div class="skill-values">
+                <div class="skill-value">HTML/CSS: 97</div>
+                <div class="skill-value">Python: 90</div>
+                <div class="skill-value">JavaScript: 83</div>
+                <div class="skill-value">C++: 89</div>
+                <div class="skill-value">Java: 79</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.link');
+
+        // Radar Chart Configuration
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Code', 'Mentality', 'Stamina', 'Gaming', 'Think'],
+                datasets: [{
+                    label: 'Skills',
+                    data: [92, 97, 98, 99, 95],
+                    backgroundColor: 'rgba(0, 255, 0, 0.15)',
+                    borderColor: 'rgba(0, 255, 0, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(0, 255, 0, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(0, 255, 0, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        pointLabels: {
+                            color: '#fff',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        ticks: {
+                            display: false
+                        },
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                maintainAspectRatio: false,
+                responsive: true,
+                aspectRatio: 1.5
+            }
+        });
+
+        // Languages Chart Configuration
+        const ctx2 = document.getElementById('languagesChart').getContext('2d');
+        const languagesChart = new Chart(ctx2, {
+            type: 'radar',
+            data: {
+                labels: ['HTML/CSS', 'Python', 'JavaScript', 'C++', 'Java'],
+                datasets: [{
+                    label: 'Programming Languages',
+                    data: [97, 90, 83, 89, 79],
+                    backgroundColor: 'rgba(0, 255, 0, 0.15)',
+                    borderColor: 'rgba(0, 255, 0, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(0, 255, 0, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(0, 255, 0, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        pointLabels: {
+                            color: '#fff',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        ticks: {
+                            display: false
+                        },
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                maintainAspectRatio: false,
+                responsive: true,
+                aspectRatio: 1.5
+            }
+        });
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html> 

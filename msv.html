@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="msv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="miroxen icon.png">
+    <title>miroxen</title>
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+
+<a href=""><img src="miroxen icon.png" alt="miroxen icon"></a>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+<ul class="nav-links">
+
+<il class="link"><a href="new-page.html">person</a></il>
+<il class="link"><a href="">home</a></il>
+<il class="link"><a href="">social media</a></il>
+</ul>
+
+<a href="contact.html" class="btn" target="_blank" rel="noopener noreferrer">contact</a>
+
+
+
+    </nav>
+    <section class="intro-section">
+     
+        <h1 class="intro-title">I'm Miroxen <span></span> Developer</h1>
+        <p class="intro-text">If you're reading this, that means either I wanna show you my work or you wanna work with me. Anyway, I'm working on an indie game with pixel art style and this is my progress.</p>
+    </section>
+
+
+<section class="container">
+    <h2 class="header">the game inspiration</h2>
+<div class="cards">
+   
+<div class="card">
+
+<div class="content">
+    <img src="/assets/download (1).jpeg" alt="">
+<h4> art style</h4>
+    <h3>  the art style will be pixel art</h3>
+</div>
+</div>
+<div class="card">
+<div class="content">
+    <img src="/assets/'Coffee Talk' Is the Best Game to Play While Social Distancing.jpeg" alt="">
+<h4>in bar narrative style</h4>
+<h3> it will be in a bar and the player will be able to talk to the characters and get to know them</h3>
+</div>
+
+</div>
+
+
+<div class="card">
+    <div class="content">
+        <img  src="/assets/download.jpeg" class="img3">
+    <h4>shopkeeping style</h4>
+    <h3>the player will have a bar and he is the manager of the bar</h3>
+    </div>
+    
+    </div>
+
+
+    <div class="card">
+        <div class="content">
+            <img  src="/assets/villagers.webp" class="img3">
+        <h4>relationship building</h4>
+        <h3>relationship building with the villagers are so deep to get with it</h3>
+        </div>
+        
+        </div>
+    
+        <div class="card">
+            <div class="content">
+                <img  src="/assets/Hades level.jpeg" class="img3">
+            <h4>perspective / combat</h4>
+            <h3> it will be in the perspective of the player and the combat will be in the style of th game</h3>
+            </div>
+            
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img  src="/assets/oh, good hunter,.jpeg" class="img3">
+                <h4>atmosphere/era</h4>
+                <h3> the atmosphere will be in the style of the game and the era will be in the style of the game</h3>
+                </div>
+                
+                </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<section class="progress-section">
+    <h2 class="header">Game Progress</h2>
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <span class="progress-text">Development Progress:3%</span>
+    </div>
+</section>
+
+<div class="sections-wrapper">
+    <section class="artwork-section">
+        <h2 class="header">Artwork</h2>
+        <h4>i'm still learning and evolving :></h4>
+        <h4>this not the official artstyle of the game but this is my art work and what im doing</h4>
+        <div class="artwork-container">
+            <div class="artwork-card">
+                <div class="artwork-content">
+                    <img src="/assets/valley.png" alt="Game Artwork Preview" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="artwork-card">
+                <div class="artwork-content">
+                    <img src="/assets/knight.png" alt="Game Artwork Preview" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="artwork-card">
+                <div class="artwork-content">
+                    <img src="/assets/sr2cabc5b8fbbaws3.png" alt="Game Artwork Preview" onclick="openModal(this.src)">
+                </div>  
+
+       
+                 
+            </div>
+
+            <div class="artwork-card">
+                <div class="artwork-content">
+                    <img src="/assets/shop.gif" alt="Game Artwork Preview" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="artwork-card">
+                <div class="artwork-content">
+                    <img src="/assets/pixel art aesthetic wallpapers.jpeg" alt="Game Artwork Preview" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Add Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <section class="tracklist-section">
+        <h2 class="header">Tracklist</h2>
+        <h4>Game Soundtrack</h4>
+        <h4>this not the official Soundtrack of the game but this is my art work and what im doing</h4>
+        <div class="tracklist-container">
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>Main Theme</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="mainTheme" src="/tracklist/piano project.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('mainTheme')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>Bar Ambience</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="barAmbience" src="tracklist/track 6.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('barAmbience')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>tweaking</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="tweaking" src="tracklist/track 4.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('tweaking')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>retro final boss</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="retrofinalboss" src="tracklist/track 2.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('retrofinalboss')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>summer</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="summer" src="tracklist/track 5.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('summer')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tracklist-card">
+                <div class="tracklist-content">
+                    <h3>souls-like type theme</h3>
+                    <p>Composed by Miroxen</p>
+                    <div class="music-player">
+                        <audio id="souls" src="tracklist/track 7.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('souls')">
+                                <i class="ri-play-fill"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+           
+
+        </div>
+    </section>
+</div>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.link');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+</script>
+<script src="msv.js"></script>
+</body>
+
+</html>

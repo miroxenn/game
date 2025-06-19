@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36393f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* LED Lines Animation */
+.led-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.led-line {
+    position: absolute;
+    background: linear-gradient(180deg, transparent, #b19cd9, transparent);
+    width: 1px;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInOut 3s ease-in-out infinite;
+    box-shadow: 0 0 15px #b19cd9, 0 0 30px #b19cd9, 0 0 45px #b19cd9;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+/* Floating Circles */
+.floating-circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #5865f2 0%, transparent 70%);
+    opacity: 0.3;
+    animation: floatCircle 15s linear infinite;
+}
+
+@keyframes floatCircle {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(100vw, 0) rotate(90deg);
+    }
+    50% {
+        transform: translate(100vw, 100vh) rotate(180deg);
+    }
+    75% {
+        transform: translate(0, 100vh) rotate(270deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+.contact-container {
+    background-color: #2f3136;
+    padding:  5rem;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #5865f2;
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #5865f2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+.discord-btn i {
+    font-size: 1.5rem;
+}
+
+.discord-btn:hover {
+    background-color: #4752c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(88, 101, 242, 0.4);
+}
+
+.discord-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
+} 
